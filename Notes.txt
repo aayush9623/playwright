@@ -1,0 +1,24 @@
+$env:PLAYWRIGHT_SERVICE_URL="wss://eastus.api.playwright.microsoft.com/playwrightworkspaces/33b35bd0-084b-443a-8ef2-5e3233a606dd/browsers"
+
+
+
+
+az role assignment create \
+--assignee "c991ab9d-d38e-409f-a323-2ac7bc9e3d75" \
+--role "Storage Blob Data Contributor" \
+--scope "$(az storage account show --name pwstrgrrdaf6c --resource-group RRD --query id -o tsv)"
+
+
+$storageId = az storage account show --name pwstrgrrdaf6c --resource-group RRD --query id -o tsv
+
+az role assignment create `
+  --assignee "cd7819e1-1b7b-4c72-9497-824150cd3b60" `
+  --role "Storage Blob Data Contributor" `
+  --scope $storageId
+
+
+correct syntax
+az role assignment create `
+  --assignee "96c6ec5f-5680-470e-afc4-e8db1473934f" `
+  --role "Storage Blob Data Contributor" `
+  --scope (az storage account show --name pwstrgrrdaf6c --resource-group RRD --query id -o tsv)

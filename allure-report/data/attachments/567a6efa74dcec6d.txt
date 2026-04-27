@@ -1,0 +1,9 @@
+Let's Shop
+[ 'ADIDAS ORIGINAL', 'ZARA COAT 3', 'iphone 13 pro' ]
+3
+ British Indian Ocean Territory
+ India
+ India
+Your orderID is:  | 69d230cef86ba51a6548303f | 
+2
+69d230cef86ba51a6548303f

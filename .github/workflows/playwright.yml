@@ -34,7 +34,7 @@ jobs:
 
       - name: Run Playwright tests
         env:
-          PLAYWRIGHT_SERVICE_URL: ${{ vars.PLAYWRIGHT_SERVICE_URL }}
+          PLAYWRIGHT_SERVICE_URL: ${{vars.PLAYWRIGHT_SERVICE_URL}}
         run: npx playwright test --config=playwright.service.config.js --workers=3
 
       - name: Upload Playwright report
@@ -44,4 +44,3 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
-          
